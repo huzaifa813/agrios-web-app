@@ -1,4 +1,5 @@
 "use client";
+import AgricultureSection from "@/components/agriculture-section";
 import Header from "@/components/Header";
 import HeroSection from "@/components/hero-section";
 import Navbar from "@/components/nav-bar";
@@ -16,7 +17,7 @@ export default function Home() {
       <Header />
       <Navbar />
       <HeroSection />
-      
+      <AgricultureSection/>
     </div>
   );
 }
