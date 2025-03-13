@@ -69,7 +69,7 @@ export default function HeroSection() {
         </div>
       </section>
 
-      <div className="relative w-full flex flex-wrap justify-center gap-6 px-4 sm:px-6 md:px-12 mt-16 ">
+      <div className="relative w-full flex flex-wrap justify-center gap-6 px-4 sm:px-6 md:px-12 mt-3 ">
 
         {features.map((feature) => (
           <div
