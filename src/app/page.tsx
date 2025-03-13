@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/hero-section";
 import Navbar from "@/components/nav-bar";
 import { Colors } from "@/utils/Colors";
-import Image from "next/image";
 
 export default function Home() {
   return (
