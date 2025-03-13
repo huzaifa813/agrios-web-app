@@ -63,7 +63,7 @@ export default function Navbar() {
         {/* Right: Search & Cart Icons */}
         <div className="flex items-center space-x-6">
           <div className="pl-4 border-l border-gray-400">
-            <Image src="/Search.png" alt="Search" width={20} height={20} className="cursor-pointer" />
+            <Image src="/Search.png" alt="Search" width={22} height={22} className="cursor-pointer" />
           </div>
           <Image src="/Cart.png" alt="Cart" width={22} height={22} className="cursor-pointer" />
         </div>

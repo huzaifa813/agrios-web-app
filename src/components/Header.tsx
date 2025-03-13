@@ -50,12 +50,15 @@ export default function Header() {
               title: "380 St Kilda Road",
               value: "Melbourne, Australia",
             },
-          ].map((item, index) => (
+          ].map((item, index, array) => (
             <div
               key={index}
-              className="flex items-center space-x-3 pr-4"
+              className="flex items-center space-x-3 pr-4 md:border-r"
               style={{
-                borderRight: `1px solid ${Colors.borderColor}`,
+                borderRight:
+                  index !== array.length - 1
+                    ? `1px solid ${Colors.borderColor}`
+                    : "none",
               }}
             >
               <div
