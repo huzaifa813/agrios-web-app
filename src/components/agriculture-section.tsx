@@ -107,7 +107,7 @@ export default function AgricultureSection() {
         {/* Button */}
         <div className="flex justify-center lg:justify-start">
           <button
-            className="mt-6 px-6 py-3 hover:bg-green-800 text-white text-base font-semibold rounded-lg shadow-md transition-all"
+            className="mt-6 px-6 py-3 text-white text-base font-semibold rounded-lg shadow-md transition-all transform hover:scale-105 hover:bg-green-700 hover:shadow-lg"
             style={{ backgroundColor: Colors.greenTopBorder1 }}
           >
             Discover More

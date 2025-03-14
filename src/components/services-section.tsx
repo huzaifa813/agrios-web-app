@@ -79,7 +79,7 @@ export default function ServicesSection() {
 
                 {/* Read More Button (Centered) */}
                 <div className="flex justify-center mt-4">
-                  <button className="bg-green-500 text-white text-sm font-semibold px-4 py-1 rounded-lg shadow">
+                  <button className="bg-green-500 text-white text-sm font-semibold px-4 py-1 rounded-lg shadow transition-transform duration-300 transform hover:scale-105 hover:bg-green-600">
                     Read More
                   </button>
                 </div>

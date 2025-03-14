@@ -52,7 +52,7 @@ export default function NewsArticles() {
         {articles.map((article) => (
           <div
             key={article.id}
-            className="relative bg-white rounded-[10px] shadow-md overflow-hidden w-[370px]"
+            className="relative bg-white rounded-[10px] shadow-md overflow-hidden w-[370px] transition-transform duration-300 transform hover:scale-105"
           >
             {/* Image Container */}
             <div className="relative w-full h-[200px]">
@@ -72,7 +72,6 @@ export default function NewsArticles() {
 
             {/* Content */}
             <div className="p-4">
-              {/* Author & Comments */}
               {/* Author & Comments (Centered with Gap) */}
               <div className="flex items-center justify-center text-gray-500 text-sm mt-2 gap-6">
                 {/* Author */}
