@@ -24,7 +24,7 @@ export default function AgricultureSection() {
             alt="Farming Close-up"
             width={160}
             height={160}
-            className="rounded-full border-4 border-white shadow-md object-cover ml-10"
+            className="rounded-full border-4 border-white shadow-md object-cover ml-40"
           />
         </div>
       </div>
@@ -79,7 +79,7 @@ export default function AgricultureSection() {
         {/* Checklist */}
         <ul className="font-semibold mt-6 space-y-2 text-inactiveGrey text-[13px]">
           <li
-            className="flex items-center gap-2 justify-center lg:justify-start text-[13px]"
+            className="flex items-center gap-2 text-[13px]"
             style={{ color: Colors.black1 }}
           >
             <Image
@@ -91,7 +91,7 @@ export default function AgricultureSection() {
             Lorem Ipsum is not simply random text.
           </li>
           <li
-            className="flex items-center gap-2 justify-center lg:justify-start text-[13px]"
+            className="flex items-center gap-2 text-[13px]"
             style={{ color: Colors.black1 }}
           >
             <Image

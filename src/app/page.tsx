@@ -1,8 +1,15 @@
 "use client";
+import AgricultureProjects from "@/components/agriculture-projects";
 import AgricultureSection from "@/components/agriculture-section";
+import ExploreProjects from "@/components/explore-projects";
+import Footer from "@/components/footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/hero-section";
 import Navbar from "@/components/nav-bar";
+import NewsArticles from "@/components/news-articles";
+import Reviews from "@/components/reviews";
+import ServicesSection from "@/components/services-section";
+import WhyChooseAgrios from "@/components/why-choose-agrios";
 import { Colors } from "@/utils/Colors";
 
 export default function Home() {
@@ -18,6 +25,13 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AgricultureSection/>
+      <ServicesSection/>
+      <AgricultureProjects/>
+      <ExploreProjects/>
+      <Reviews/>
+      <WhyChooseAgrios/>
+      <NewsArticles/>
+      <Footer/>
     </div>
   );
 }
