@@ -25,6 +25,7 @@ export default function AgricultureHero() {
         ].map((item, index) => (
           <span
             key={index}
+            style={{ fontFamily: "manrope" }}
             className="text-[16px] md:text-[18px] font-medium text-white whitespace-nowrap hover:underline cursor-pointer transition-colors duration-300"
           >
             {item}
@@ -55,6 +56,7 @@ export default function AgricultureHero() {
           ].map((item, index) => (
             <span
               key={index}
+              style={{ fontFamily: "manrope" }}
               className="text-[18px] font-medium hover:underline cursor-pointer transition-colors duration-300"
             >
               {item}
@@ -66,7 +68,10 @@ export default function AgricultureHero() {
       {/* Text Content with Play Button */}
       <div className="relative flex flex-col md:flex-row items-center md:items-start justify-center w-full gap-4 md:gap-8 mt-10">
         {/* Heading - Left-aligned */}
-        <h1 className="text-3xl md:text-5xl font-bold w-full md:w-1/2 text-left">
+        <h1
+          className="text-3xl md:text-5xl font-bold w-full md:w-1/2 text-left"
+          style={{ fontFamily: "manrope" }}
+        >
           Agriculture Matters to the Future of Development
         </h1>
 

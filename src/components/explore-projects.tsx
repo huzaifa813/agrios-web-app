@@ -36,6 +36,7 @@ export default function ExploreProjects() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
+        style={{ fontFamily: "manrope" }}
       >
         Explore Projects
       </motion.h2>
@@ -61,7 +62,10 @@ export default function ExploreProjects() {
             />
 
             {/* Text Overlay */}
-            <div className="absolute bottom-4 left-6 text-white text-lg font-semibold w-1/3 text-start">
+            <div
+              style={{ fontFamily: "manrope" }}
+              className="absolute bottom-4 left-6 text-white text-lg font-semibold w-1/3 text-start"
+            >
               {project.title}
             </div>
           </motion.div>

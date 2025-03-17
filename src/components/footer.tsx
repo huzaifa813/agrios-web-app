@@ -12,7 +12,10 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <Image src="/white-logo.png" alt="Logo" width={100} height={50} />
           </div>
-          <p className="mt-4 text-gray-400 hover:text-white transition duration-300">
+          <p
+            style={{ fontFamily: "manrope" }}
+            className="mt-4 text-gray-400 hover:text-white transition duration-300"
+          >
             There are many variations of passages
             <br /> of lorem ipsum available, but the <br />
             majority suffered.
@@ -52,7 +55,12 @@ export default function Footer() {
 
         {/* Explore Section */}
         <div>
-          <h3 className="text-white text-lg font-semibold mb-4">Explore</h3>
+          <h3
+            style={{ fontFamily: "manrope" }}
+            className="text-white text-lg font-semibold mb-4"
+          >
+            Explore
+          </h3>
           <div className="flex items-center gap-1 mb-6">
             <div className="h-[4px] w-[45px] bg-[#4BAF47] rounded-[2px]"></div>
             <div className="h-[4px] w-[4px] bg-[#4BAF47] rounded-full"></div>
@@ -69,6 +77,7 @@ export default function Footer() {
             ].map((item) => (
               <li
                 key={item}
+                style={{ fontFamily: "manrope" }}
                 className="flex items-center gap-2 text-gray-400 hover:text-white cursor-pointer transition duration-300"
               >
                 <Image src="/niccon.png" alt="Icon" width={20} height={20} />
@@ -80,30 +89,41 @@ export default function Footer() {
 
         {/* News Section */}
         <div>
-          <h3 className="text-white text-lg font-semibold mb-4">News</h3>
+          <h3
+            style={{ fontFamily: "manrope" }}
+            className="text-white text-lg font-semibold mb-4"
+          >
+            News
+          </h3>
           <div className="flex items-center gap-1 mb-6">
             <div className="h-[4px] w-[45px] bg-[#4BAF47] rounded-[2px]"></div>
             <div className="h-[4px] w-[4px] bg-[#4BAF47] rounded-full"></div>
           </div>
           <div className="space-y-3">
             <div>
-              <p className="text-white font-semibold hover:text-green-400 transition duration-300">
+              <p
+                style={{ fontFamily: "manrope" }}
+                className="text-white font-semibold hover:text-green-400 transition duration-300"
+              >
                 Bringing Food Production Back To Cities
               </p>
               <p
                 className="text-green-400 text-sm"
-                style={{ color: Colors.greenTopBorder3 }}
+                style={{ color: Colors.greenTopBorder3, fontFamily: "manrope" }}
               >
                 July 5, 2022
               </p>
             </div>
             <div>
-              <p className="text-white font-semibold hover:text-green-400 transition duration-300">
+              <p
+                style={{ fontFamily: "manrope" }}
+                className="text-white font-semibold hover:text-green-400 transition duration-300"
+              >
                 The Future of Farming, Smart Irrigation Solutions
               </p>
               <p
                 className="text-green-400 text-sm"
-                style={{ color: Colors.greenTopBorder3 }}
+                style={{ color: Colors.greenTopBorder3, fontFamily: "manrope" }}
               >
                 July 5, 2022
               </p>
@@ -113,7 +133,12 @@ export default function Footer() {
 
         {/* Contact Section */}
         <div>
-          <h3 className="text-white text-lg font-semibold mb-4">Contact</h3>
+          <h3
+            style={{ fontFamily: "manrope" }}
+            className="text-white text-lg font-semibold mb-4"
+          >
+            Contact
+          </h3>
           <div className="flex items-center gap-1 mb-6">
             <div className="h-[4px] w-[45px] bg-[#4BAF47] rounded-[2px]"></div>
             <div className="h-[4px] w-[4px] bg-[#4BAF47] rounded-full"></div>
@@ -121,20 +146,27 @@ export default function Footer() {
           <div className="space-y-3">
             <p className="flex items-center gap-2 hover:text-white transition duration-300">
               <Image src="/yphone.png" alt="Phone" width={15} height={15} />
-              <span>666 888 0000</span>
+              <span style={{ fontFamily: "manrope" }}>666 888 0000</span>
             </p>
             <p className="flex items-center gap-2 hover:text-white transition duration-300">
               <Image src="/ymsg.png" alt="Email" width={15} height={15} />
-              <span>needhelp@company.com</span>
+              <span style={{ fontFamily: "manrope" }}>
+                needhelp@company.com
+              </span>
             </p>
-            <p className="flex items-center gap-2 hover:text-white transition duration-300">
+            <p
+              style={{ fontFamily: "manrope" }}
+              className="flex items-center gap-2 hover:text-white transition duration-300"
+            >
               <Image
                 src="/ylocation.png"
                 alt="Location"
                 width={15}
                 height={15}
               />
-              <span>80 Brooklyn Golden Street, New York, USA</span>
+              <span style={{ fontFamily: "manrope" }}>
+                80 Brooklyn Golden Street, New York, USA
+              </span>
             </p>
           </div>
 
@@ -155,13 +187,25 @@ export default function Footer() {
 
       {/* Bottom Footer */}
       <div className="mx-20 mt-10 border-t border-gray-600 pt-4 text-gray-400 text-sm flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
-        <p>© All Copyright 2024 by shawonetc Themes</p>
+        <p style={{ fontFamily: "manrope" }}>
+          © All Copyright 2024 by shawonetc Themes
+        </p>
         <div className="flex gap-4 items-center mt-2 sm:mt-0">
-          <p className="hover:text-white cursor-pointer transition duration-300">
+          <p
+            style={{ fontFamily: "manrope" }}
+            className="hover:text-white cursor-pointer transition duration-300"
+          >
             Terms of Use
           </p>
-          <span className="h-4 w-[1px] bg-gray-500"></span> {/* Divider Line */}
-          <p className="hover:text-white cursor-pointer transition duration-300">
+          <span
+            style={{ fontFamily: "manrope" }}
+            className="h-4 w-[1px] bg-gray-500"
+          ></span>{" "}
+          {/* Divider Line */}
+          <p
+            style={{ fontFamily: "manrope" }}
+            className="hover:text-white cursor-pointer transition duration-300"
+          >
             Privacy Policy
           </p>
         </div>

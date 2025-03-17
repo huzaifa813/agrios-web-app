@@ -4,7 +4,7 @@ import "./globals.css";
 
 const manrope = Manrope({ 
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'], // Specify the weights you need
+  weight: ['400', '500', '600', '700','800'], // Specify the weights you need
   variable: '--font-manrope' // Define a CSS variable
 });
 

@@ -43,7 +43,11 @@ export default function ServicesSection() {
           />
           <h2
             className="mt-2 mb-10 font-extrabold text-2xl sm:text-3xl lg:text-4xl"
-            style={{ color: Colors.black1, fontWeight: 800 }}
+            style={{
+              color: Colors.black1,
+              fontWeight: 800,
+              fontFamily: "manrope",
+            }}
           >
             What We Offer
           </h2>
@@ -72,14 +76,21 @@ export default function ServicesSection() {
                 {/* Title (Forced Two Lines, Centered) */}
                 <p
                   className="font-semibold leading-tight h-[48px] mt-10 text-[20px] w-full text-center px-2"
-                  style={{ color: Colors.black1 }}
+                  style={{
+                    color: Colors.black1,
+                    fontFamily: "manrope",
+                    fontWeight: "800",
+                  }}
                 >
                   {service.title}
                 </p>
 
                 {/* Read More Button (Centered) */}
                 <div className="flex justify-center mt-4">
-                  <button className="bg-green-500 text-white text-sm font-semibold px-4 py-1 rounded-lg shadow transition-transform duration-300 transform hover:scale-105 hover:bg-green-600">
+                  <button
+                    style={{ fontFamily: "manrope" }}
+                    className="bg-green-500 text-white text-sm font-semibold px-4 py-1 rounded-lg shadow transition-transform duration-300 transform hover:scale-105 hover:bg-green-600"
+                  >
                     Read More
                   </button>
                 </div>

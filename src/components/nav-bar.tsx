@@ -19,7 +19,6 @@ export default function Navbar() {
   return (
     <nav className="bg-[#F8F7F0] w-full py-4 shadow-sm relative">
       <div className="container mx-auto flex justify-between items-center px-4 lg:px-10">
-        
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -47,7 +46,15 @@ export default function Navbar() {
                 if (img) img.src = "/inactive-caret-down.png"; // Reset caret
               }}
             >
-              <span>{item.name}</span>
+              <span
+                style={{
+                  color: Colors.inactiveGrey,
+                  fontFamily: "manrope",
+                  fontWeight: "400",
+                }}
+              >
+                {item.name}
+              </span>
               {item.showCaret && (
                 <Image
                   src="/inactive-caret-down.png"
@@ -63,9 +70,21 @@ export default function Navbar() {
         {/* Right: Search & Cart Icons */}
         <div className="flex items-center space-x-6">
           <div className="pl-4 border-l border-gray-400">
-            <Image src="/Search.png" alt="Search" width={22} height={22} className="cursor-pointer" />
+            <Image
+              src="/Search.png"
+              alt="Search"
+              width={22}
+              height={22}
+              className="cursor-pointer"
+            />
           </div>
-          <Image src="/Cart.png" alt="Cart" width={22} height={22} className="cursor-pointer" />
+          <Image
+            src="/Cart.png"
+            alt="Cart"
+            width={22}
+            height={22}
+            className="cursor-pointer"
+          />
         </div>
       </div>
 
@@ -74,7 +93,10 @@ export default function Navbar() {
         <div className="md:hidden bg-white shadow-md absolute w-full left-0 top-16 z-50 transition-all duration-300">
           <ul className="flex flex-col items-center py-4 space-y-4">
             {menuItems.map((item, index) => (
-              <li key={index} className="text-[16px] font-medium text-gray-800 cursor-pointer">
+              <li
+                key={index}
+                className="text-[16px] font-medium text-gray-800 cursor-pointer"
+              >
                 {item.name}
               </li>
             ))}

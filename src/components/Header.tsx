@@ -9,7 +9,7 @@ export default function Header() {
         <Image src="/logo.png" alt="Agrios Logo" width={140} height={50} />
       </div>
 
-      {/* Center: Icons + Contact Info (Everything in One Div) */}
+      {/* Center: Icons + Contact Info */}
       <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 lg:space-x-12">
         {/* Social Icons */}
         <div className="flex space-x-3">
@@ -53,7 +53,9 @@ export default function Header() {
           ].map((item, index, array) => (
             <div
               key={index}
-              className="flex items-center space-x-3 pr-4 md:border-r"
+              className={`flex items-center space-x-3 pr-4 ${
+                index !== array.length - 1 ? "md:border-r" : ""
+              }`}
               style={{
                 borderRight:
                   index !== array.length - 1
@@ -75,13 +77,21 @@ export default function Header() {
               <div className="flex flex-col">
                 <span
                   className="text-[12px] font-manrope"
-                  style={{ color: Colors.inactiveGrey }}
+                  style={{
+                    color: Colors.inactiveGrey,
+                    fontFamily: "manrope",
+                    fontWeight: "400",
+                  }}
                 >
                   {item.title}
                 </span>
                 <span
                   className="text-[14px] font-manrope font-semibold"
-                  style={{ color: Colors.black1 }}
+                  style={{
+                    color: Colors.black1,
+                    fontFamily: "manrope",
+                    fontWeight: "600",
+                  }}
                 >
                   {item.value}
                 </span>

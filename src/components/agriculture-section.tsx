@@ -42,18 +42,27 @@ export default function AgricultureSection() {
           />
         </div>
 
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 leading-snug">
+        <h2
+          className="text-2xl sm:text-3xl font-bold text-gray-800 leading-snug"
+          style={{ fontFamily: "manrope" }}
+        >
           Agriculture & Organic <br className="hidden sm:block" /> Product Farm
         </h2>
         <p
           className="text-lg text-greenTopBorder1 font-semibold my-6"
-          style={{ color: Colors.greenTopBorder1 }}
+          style={{
+            color: Colors.greenTopBorder1,
+            fontFamily: "manrope",
+          }}
         >
           Agrios is the largest global organic farm.
         </p>
         <p
           className="text-inactiveGrey mt-4"
-          style={{ color: Colors.inactiveGrey }}
+          style={{
+            color: Colors.inactiveGrey,
+            fontFamily: "manrope",
+          }}
         >
           There are many variations of passages of lorem ipsum available but the
           majority have suffered alteration in some form by injected humor or
@@ -64,13 +73,19 @@ export default function AgricultureSection() {
         <div className="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-6">
           <div className="flex items-center gap-3">
             <Image src="/cicon1.png" alt="icon" width={30} height={30} />
-            <p className=" font-semibold" style={{ color: Colors.black1 }}>
+            <p
+              className=" font-semibold"
+              style={{ color: Colors.black1, fontFamily: "manrope" }}
+            >
               Growing fruits & vegetables
             </p>
           </div>
           <div className="flex items-center gap-3">
             <Image src="/cicon2.png" alt="icon" width={30} height={30} />
-            <p className=" font-semibold" style={{ color: Colors.black1 }}>
+            <p
+              className=" font-semibold"
+              style={{ color: Colors.black1, fontFamily: "manrope" }}
+            >
               Tips for ripening your fruits
             </p>
           </div>
@@ -80,7 +95,7 @@ export default function AgricultureSection() {
         <ul className="font-semibold mt-6 space-y-2 text-inactiveGrey text-[13px]">
           <li
             className="flex items-center gap-2 text-[13px]"
-            style={{ color: Colors.black1 }}
+            style={{ color: Colors.black1, fontFamily: "manrope" }}
           >
             <Image
               src="/checked-box.png"
@@ -92,7 +107,7 @@ export default function AgricultureSection() {
           </li>
           <li
             className="flex items-center gap-2 text-[13px]"
-            style={{ color: Colors.black1 }}
+            style={{ color: Colors.black1, fontFamily: "manrope" }}
           >
             <Image
               src="/checked-box.png"
@@ -108,7 +123,10 @@ export default function AgricultureSection() {
         <div className="flex justify-center lg:justify-start">
           <button
             className="mt-6 px-6 py-3 text-white text-base font-semibold rounded-lg shadow-md transition-all transform hover:scale-105 hover:bg-green-700 hover:shadow-lg"
-            style={{ backgroundColor: Colors.greenTopBorder1 }}
+            style={{
+              backgroundColor: Colors.greenTopBorder1,
+              fontFamily: "manrope",
+            }}
           >
             Discover More
           </button>
