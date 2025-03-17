@@ -6,5 +6,6 @@ export const Colors={
     black1:'#1F1E17',
     iconBg:'#F8F7F0',
     borderColor:'#E4E2D7',
-    white:'#FFFFFF'
+    white:'#FFFFFF',
+    greenBg:'#49A760',
 }

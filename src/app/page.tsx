@@ -1,8 +1,8 @@
 "use client";
-import Home2 from "@/pages/Home2";
+import Home1 from "@/app/Home1/page";
 
 export default function Home() {
   return (
-    <Home2/>
+    <Home1/>
   );
 }

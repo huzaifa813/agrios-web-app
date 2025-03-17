@@ -1,23 +1,48 @@
+"use client"; // Ensure it's a client component
+
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Menu, X } from "lucide-react"; // Import Lucide icons
 import { Colors } from "@/utils/Colors";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [homeDropdownOpen, setHomeDropdownOpen] = useState(false);
+  const router = useRouter();
+  const dropdownRef = useRef<HTMLUListElement | null>(null);
 
   const menuItems = [
-    { name: "Home", showCaret: true },
-    { name: "About", showCaret: false },
-    { name: "Services", showCaret: true },
-    { name: "Projects", showCaret: true },
-    { name: "News", showCaret: true },
-    { name: "Shop", showCaret: true },
-    { name: "Contact", showCaret: false },
+    {
+      name: "Home",
+      path: "/",
+      showCaret: true,
+      dropdown: [{ name: "Natural Home", path: "/Home2" }],
+    },
+    { name: "About", path: "/about", showCaret: false },
+    { name: "Services", path: "/services", showCaret: true },
+    { name: "Projects", path: "/projects", showCaret: true },
+    { name: "News", path: "/news", showCaret: true },
+    { name: "Shop", path: "/shop", showCaret: true },
+    { name: "Contact", path: "/contact", showCaret: false },
   ];
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && event.target instanceof Node && !dropdownRef.current.contains(event.target)) {
+        setHomeDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <nav className="bg-[#F8F7F0] w-full py-4 shadow-sm relative">
+    <nav className="bg-[#F8F7F0] w-full py-4 shadow-sm relative z-50">
       <div className="container mx-auto flex justify-between items-center px-4 lg:px-10">
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
@@ -27,23 +52,18 @@ export default function Navbar() {
         </div>
 
         {/* Center: Navigation Links (Desktop) */}
-        <ul className="hidden md:flex flex-1 justify-center space-x-10 text-[16px] font-semibold">
+        <ul className="hidden md:flex flex-1 justify-center space-x-10 text-[16px] font-semibold relative">
           {menuItems.map((item, index) => (
             <li
               key={index}
-              className="flex items-center space-x-1 cursor-pointer transition-all duration-200 font-semibold"
+              className="relative flex items-center space-x-1 cursor-pointer transition-all duration-200 font-semibold"
               style={{ color: Colors.inactiveGrey, fontWeight: 500 }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = Colors.black1;
-                e.currentTarget.style.fontWeight = "700";
-                const img = e.currentTarget.querySelector("img");
-                if (img) img.src = "/active-caret-down.png"; // Change caret
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = Colors.inactiveGrey;
-                e.currentTarget.style.fontWeight = "500"; // Reset font weight
-                const img = e.currentTarget.querySelector("img");
-                if (img) img.src = "/inactive-caret-down.png"; // Reset caret
+              onClick={() => {
+                if (item.name === "Home") {
+                  setHomeDropdownOpen(!homeDropdownOpen);
+                } else {
+                  router.push(item.path);
+                }
               }}
             >
               <span
@@ -62,6 +82,26 @@ export default function Navbar() {
                   width={10}
                   height={10}
                 />
+              )}
+
+              {/* Dropdown for Home */}
+              {item.name === "Home" && homeDropdownOpen && (
+                <ul
+                  ref={dropdownRef} // ✅ Correctly assign ref to <ul>
+                  className="absolute top-full left-0 mt-2 w-40 bg-white shadow-lg rounded-md py-2 z-50 border border-gray-200"
+                >
+                  {item.dropdown?.map((subItem, subIndex) => (
+                    <li key={subIndex} className="hover:bg-gray-100">
+                      <Link
+                        href={subItem.path}
+                        className="block px-4 py-2 text-gray-800"
+                        onClick={() => setHomeDropdownOpen(false)} // ✅ Close on click
+                      >
+                        {subItem.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               )}
             </li>
           ))}
@@ -96,6 +136,10 @@ export default function Navbar() {
               <li
                 key={index}
                 className="text-[16px] font-medium text-gray-800 cursor-pointer"
+                onClick={() => {
+                  router.push(item.path);
+                  setMobileMenuOpen(false);
+                }}
               >
                 {item.name}
               </li>
