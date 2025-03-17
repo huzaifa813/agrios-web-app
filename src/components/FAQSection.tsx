@@ -78,7 +78,7 @@ export default function FAQSection() {
             className="font-bold mt-2 mb-4 text-[28px] md:text-[40px] lg:text-[48px]"
             style={{ fontFamily: "manrope" }}
           >
-            You've Any Questions
+            You ve Any Questions
           </h2>
 
           {/* FAQ Items */}
