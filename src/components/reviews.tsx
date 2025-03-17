@@ -43,14 +43,17 @@ export default function Reviews() {
         />
 
         {/* Heading */}
-        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mt-2">
+        <h2
+          className="text-2xl md:text-4xl font-bold text-gray-900 mt-2"
+          style={{ fontFamily: "manrope" }}
+        >
           What They re <br className="hidden md:block" /> Talking About Agrios
         </h2>
 
         {/* Paragraph */}
         <p
           className="w-full md:w-[80%] text-[14px] md:text-[14px] leading-relaxed mt-4 font-medium"
-          style={{ color: Colors.inactiveGrey }}
+          style={{ color: Colors.inactiveGrey, fontFamily: "manrope" }}
         >
           There are many variations of passages of available but the majority
           have suffered alteration in some form by injected humor or random word
@@ -58,7 +61,11 @@ export default function Reviews() {
         </p>
 
         {/* View All Button */}
-        <button className="mt-6 bg-green-600 text-[14px] md:text-[14px] text-white px-6 py-3 rounded-md hover:bg-green-700 transition">
+
+        <button
+          style={{ fontFamily: "manrope" }}
+          className="mt-6 bg-green-600 text-[14px] md:text-[14px] text-white px-6 py-3 rounded-md hover:bg-green-700 transition"
+        >
           View All Testimonials
         </button>
       </div>
@@ -98,19 +105,25 @@ export default function Reviews() {
           <div className="w-full md:w-[80%]">
             <p
               className="text-[14px] md:text-[14px] font-medium leading-relaxed"
-              style={{ color: Colors.inactiveGrey }}
+              style={{ color: Colors.inactiveGrey, fontFamily: "manrope" }}
             >
               {testimonials[index].text}
             </p>
 
             {/* Name & Rating (Row Alignment) */}
             <div className="flex flex-col md:flex-row items-center justify-between mt-4">
-              <h4 className="font-bold text-gray-900 text-lg md:text-xl">
+              <h4
+                className="font-bold text-gray-900 text-lg md:text-xl"
+                style={{ fontFamily: "manrope" }}
+              >
                 {testimonials[index].name}
               </h4>
 
               {/* Star Rating */}
-              <div className="flex text-yellow-500 text-lg">
+              <div
+                className="flex text-yellow-500 text-lg"
+                style={{ fontFamily: "manrope" }}
+              >
                 {"★".repeat(testimonials[index].rating)}
               </div>
             </div>

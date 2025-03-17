@@ -30,13 +30,16 @@ export default function WhyChooseAgrios() {
           />
         </div>
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+        <h2
+          style={{ fontFamily: "manrope" }}
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900"
+        >
           Why Choose Agrios Market
         </h2>
 
         <p
           className="text-[14px] sm:text-[14px] w-full sm:w-[80%] mx-auto lg:mx-0 leading-relaxed mt-4"
-          style={{ color: Colors.inactiveGrey }}
+          style={{ color: Colors.inactiveGrey, fontFamily: "manrope" }}
         >
           There are many variations of passages available, but the majority have
           suffered alteration in some form by injected humor or random words
@@ -55,12 +58,15 @@ export default function WhyChooseAgrios() {
               className="w-6 h-6 flex-shrink-0"
             />
             <div>
-              <h4 className="text-lg font-semibold text-gray-900">
+              <h4
+                className="text-lg font-semibold text-gray-900"
+                style={{ fontFamily: "manrope" }}
+              >
                 Quality Organic Food
               </h4>
               <p
                 className="text-[14px] sm:text-[14px]"
-                style={{ color: Colors.inactiveGrey }}
+                style={{ color: Colors.inactiveGrey, fontFamily: "manrope" }}
               >
                 There are variations. You need to be sure there is anything
                 hidden in the middle of the text.
@@ -78,12 +84,15 @@ export default function WhyChooseAgrios() {
               className="w-6 h-6 flex-shrink-0"
             />
             <div>
-              <h4 className="text-lg font-semibold text-gray-900">
+              <h4
+                className="text-lg font-semibold text-gray-900"
+                style={{ fontFamily: "manrope" }}
+              >
                 Professional Farmers
               </h4>
               <p
                 className="text-[14px] sm:text-[14px]"
-                style={{ color: Colors.inactiveGrey }}
+                style={{ color: Colors.inactiveGrey, fontFamily: "manrope" }}
               >
                 There are variations. You need to be sure there is anything
                 hidden in the middle of the text.
@@ -101,12 +110,15 @@ export default function WhyChooseAgrios() {
               className="w-6 h-6 flex-shrink-0"
             />
             <div>
-              <h4 className="text-lg font-semibold text-gray-900">
+              <h4
+                className="text-lg font-semibold text-gray-900"
+                style={{ fontFamily: "manrope" }}
+              >
                 Quality Products
               </h4>
               <p
                 className="text-[14px] sm:text-[14px]"
-                style={{ color: Colors.inactiveGrey }}
+                style={{ color: Colors.inactiveGrey, fontFamily: "manrope" }}
               >
                 There are variations. You need to be sure there is anything
                 hidden in the middle of the text.
@@ -116,7 +128,10 @@ export default function WhyChooseAgrios() {
         </div>
 
         {/* Discover More Button */}
-        <button className="mt-6 bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition w-[40%] mx-auto sm:mx-0">
+        <button
+          style={{ fontFamily: "manrope" }}
+          className="mt-6 bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition w-[40%] mx-auto sm:mx-0"
+        >
           Discover More
         </button>
       </div>

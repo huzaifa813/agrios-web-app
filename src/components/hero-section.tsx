@@ -33,7 +33,11 @@ export default function HeroSection() {
         <div className="relative z-10 px-6 md:px-12 ml-6 sm:ml-12 md:ml-20">
           <h5
             className="text-[16px] uppercase tracking-widest"
-            style={{ color: Colors.white }}
+            style={{
+              color: Colors.white,
+              fontFamily: "manrope",
+              fontWeight: "400",
+            }}
           >
             Welcome to Adrios Farming
           </h5>
@@ -51,7 +55,11 @@ export default function HeroSection() {
 
           <p
             className="max-w-sm sm:max-w-md md:max-w-lg text-[16px]"
-            style={{ color: Colors.white }}
+            style={{
+              color: Colors.white,
+              fontFamily: "manrope",
+              fontWeight: "400",
+            }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
@@ -62,6 +70,8 @@ export default function HeroSection() {
             style={{
               backgroundColor: Colors.greenTopBorder1,
               color: Colors.white,
+              fontFamily: "manrope",
+              fontWeight: "400",
             }}
           >
             Discover More
@@ -70,14 +80,12 @@ export default function HeroSection() {
       </section>
 
       <div className="relative w-full flex flex-wrap justify-center gap-6 px-4 sm:px-6 md:px-12 mt-3 ">
-
         {features.map((feature) => (
           <div
-          key={feature.id}
-          className="flex flex-col shadow-lg rounded-xl p-6 w-full sm:w-[48%] md:w-[30%] transition-all hover:scale-105 hover:shadow-xl items-center justify-center"
-          style={{ backgroundColor: Colors.white }}
-        >
-        
+            key={feature.id}
+            className="flex flex-col shadow-lg rounded-xl p-6 w-full sm:w-[48%] md:w-[30%] transition-all hover:scale-105 hover:shadow-xl items-center justify-center"
+            style={{ backgroundColor: Colors.white }}
+          >
             <Image
               src={feature.feature}
               alt={`Feature ${feature.id}`}
@@ -88,7 +96,11 @@ export default function HeroSection() {
 
             <h2
               className="text-[24px] font-extrabold mt-2 w-full text-center"
-              style={{ color: Colors.black1 }}
+              style={{
+                color: Colors.black1,
+                fontFamily: "manrope",
+                fontWeight: "400",
+              }}
             >
               {feature.title}
             </h2>

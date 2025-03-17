@@ -43,7 +43,10 @@ export default function NewsArticles() {
       </div>
 
       {/* Section Title */}
-      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+      <h2
+        className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2"
+        style={{ fontFamily: "manrope" }}
+      >
         News & Articles
       </h2>
 
@@ -57,7 +60,10 @@ export default function NewsArticles() {
             {/* Image Container */}
             <div className="relative w-full h-[200px]">
               {/* Date Positioned Below Image */}
-              <div className="absolute top-[190px] left-1/2 -translate-x-1/2 bg-green-600 text-white text-sm px-3 py-1 rounded-md shadow-md z-10">
+              <div
+                style={{ fontFamily: "manrope" }}
+                className="absolute top-[190px] left-1/2 -translate-x-1/2 bg-green-600 text-white text-sm px-3 py-1 rounded-md shadow-md z-10"
+              >
                 {article.date}
               </div>
 
@@ -83,7 +89,9 @@ export default function NewsArticles() {
                     height={20}
                     className="rounded-full"
                   />
-                  <span>{article.author}</span>
+                  <span style={{ fontFamily: "manrope" }}>
+                    {article.author}
+                  </span>
                 </div>
 
                 {/* Comments */}
@@ -95,12 +103,17 @@ export default function NewsArticles() {
                     height={20}
                     className="rounded-full"
                   />
-                  <span>{article.comments} Comments</span>
+                  <span style={{ fontFamily: "manrope" }}>
+                    {article.comments} Comments
+                  </span>
                 </div>
               </div>
 
               {/* Title */}
-              <h3 className="mt-3 text-lg font-semibold text-gray-900">
+              <h3
+                style={{ fontFamily: "manrope" }}
+                className="mt-3 text-lg font-semibold text-gray-900"
+              >
                 {article.title}
               </h3>
             </div>
