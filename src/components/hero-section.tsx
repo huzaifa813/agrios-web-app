@@ -39,7 +39,7 @@ export default function HeroSection() {
               fontWeight: "400",
             }}
           >
-            Welcome to Adrios Farming
+            Welcome to Agrios Farming
           </h5>
 
           <div className="mt-4">
