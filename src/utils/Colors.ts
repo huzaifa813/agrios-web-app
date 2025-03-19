@@ -8,4 +8,6 @@ export const Colors={
     borderColor:'#E4E2D7',
     white:'#FFFFFF',
     greenBg:'#49A760',
+    lightWhite:'#FFFFFFB2',
+    lightGrey:'#A5A49A'
 }
