@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Import Lucide icons
-import { Colors } from "@/utils/Colors";
 import { useRouter } from "next/navigation";
 
 export default function Navbar() {

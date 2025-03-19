@@ -1,14 +1,9 @@
 "use client";
 import AboutHeader from "@/components/about-header";
-import AgricultureCards from "@/components/agriculture-card";
 import AgricultureCategoryGrid from "@/components/agriculture-category-grid";
 import Footer from "@/components/footer";
 import Header from "@/components/Header";
-import HealthyFoodSection from "@/components/healthy-food-section";
-import HeroSection2 from "@/components/hero-section2";
 import Navbar from "@/components/nav-bar";
-import PartnerLogos from "@/components/partner-logo";
-import ServicesSection from "@/components/services-section";
 import { Colors } from "@/utils/Colors";
 
 export default function AgriProjects() {

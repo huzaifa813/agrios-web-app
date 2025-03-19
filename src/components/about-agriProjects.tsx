@@ -2,12 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
-import { Menu, X } from "lucide-react"; // Import icons from lucide-react
 import { Colors } from "@/utils/Colors";
 
 export default function AboutAgricultureProjects() {
-  const [isOpen, setIsOpen] = useState(false); // Toggle state for menu
 
   return (
     <div className="relative w-full h-screen flex flex-col justify-center items-center text-white bg-[url('/agri-projects.png')] bg-cover bg-center px-4 mt-20">
