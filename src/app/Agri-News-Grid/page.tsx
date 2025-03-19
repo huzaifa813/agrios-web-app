@@ -1,7 +1,5 @@
 "use client";
 import AboutHeader from "@/components/about-header";
-import AgricultureCategoryGrid from "@/components/agriculture-category-grid";
-import BlogListing from "@/components/blog-listing";
 import Footer from "@/components/footer";
 import Header from "@/components/Header";
 import Navbar from "@/components/nav-bar";
