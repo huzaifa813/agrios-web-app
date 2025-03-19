@@ -2,6 +2,7 @@
 
 import { Colors } from "@/utils/Colors";
 import Image from "next/image";
+import SimilarProjects from "./similar-projects";
 
 export default function DetailsofProj() {
   return (
@@ -244,6 +245,7 @@ export default function DetailsofProj() {
           </div>
         </div>
       </div>
+      <SimilarProjects/>
     </section>
   );
 }
