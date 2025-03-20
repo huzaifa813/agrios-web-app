@@ -36,8 +36,8 @@ export default function Navbar() {
         { name: "News Grid", path: "/Agri-News-Grid" },
       ],
     },
-    { name: "Shop", path: "/shop" },
-    { name: "Contact", path: "/contact" },
+    { name: "Shop", path: "/Agri-Shop" },
+    { name: "Contact", path: "/Contact-Us" },
   ];
 
   return (

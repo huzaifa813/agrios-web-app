@@ -23,7 +23,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <section className="w-full max-w-6xl mx-auto py-8 px-4 lg:px-6 flex flex-col lg:flex-row bg-white shadow-md rounded-lg">
+      <section className="mb-20 w-full max-w-6xl mx-auto py-8 px-4 lg:px-6 flex flex-col lg:flex-row bg-white shadow-md rounded-lg">
         {/* Left Side - Google Map */}
         <div className="w-full lg:w-1/2 h-64 lg:h-auto">
           <iframe
@@ -96,14 +96,14 @@ export default function ContactForm() {
           </form>
         </div>
       </section>
-      <Image
+      {/* <Image
         src={"/LogoBanner.png"}
         alt="Logo Banner"
         layout="responsive"
         width={1920} // Set a high width to ensure full width
         height={300} // Adjust height to match the design
         className="w-full h-auto"
-      />
+      /> */}
     </>
   );
 }
