@@ -1,12 +1,10 @@
 "use client";
 import AboutHeader from "@/components/about-header";
 import ContactForm from "@/components/contact-form";
-import DescriptionSection from "@/components/description-section";
 import Footer from "@/components/footer";
 import Header from "@/components/Header";
 import InfoCards from "@/components/info-cards";
 import Navbar from "@/components/nav-bar";
-import DetailsOfProduct from "@/components/product-detail";
 import { Colors } from "@/utils/Colors";
 
 export default function ProductDetails() {
