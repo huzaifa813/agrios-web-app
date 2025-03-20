@@ -1,6 +1,5 @@
 "use client";
 import AboutHeader from "@/components/about-header";
-import DescriptionSection from "@/components/description-section";
 import Footer from "@/components/footer";
 import Header from "@/components/Header";
 import Navbar from "@/components/nav-bar";
@@ -20,7 +19,6 @@ export default function ProductDetails() {
       <Navbar />
       <AboutHeader text1="SHOP / AGRICULTURE / TOMATO" text2="Our Shop" />
       <DetailsOfProduct />
-      <DescriptionSection />
       <Footer />
     </div>
   );
