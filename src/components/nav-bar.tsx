@@ -13,14 +13,18 @@ export default function Navbar() {
   // Close dropdown when clicking outside (Mobile)
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      const dropdown = document.getElementById("news-dropdown");
-      if (dropdown && !dropdown.contains(event.target as Node)) {
+      const target = event.target as HTMLElement;
+      if (!target.closest(".menu-container")) {
+        setMobileMenuOpen(false);
         setNewsDropdownOpen(false);
+        setMobileNewsDropdownOpen(false);
       }
     };
+  
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
+  
 
   const menuItems = [
     { name: "Home", path: "/" },
@@ -42,7 +46,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[#F8F7F0] w-full py-4 shadow-sm relative z-50">
-      <div className="container mx-auto flex justify-between items-center px-4 lg:px-10">
+      <div className="container mx-auto flex justify-between items-center px-4 lg:px-10 menu-container">
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -71,7 +75,6 @@ export default function Navbar() {
               {/* Dropdown Menu for News (Desktop) */}
               {item.isDropdown && newsDropdownOpen && (
                 <ul
-                  id="news-dropdown"
                   className="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md overflow-hidden"
                 >
                   {item.dropdownItems.map((subItem, subIndex) => (
