@@ -32,28 +32,53 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   const menuItems = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/About" },
-    { name: "Services", path: "/Agri-Services" },
-    { name: "Projects", path: "/Agri-Projects" },
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "About",
+      path: "/About",
+    },
+    {
+      name: "Services",
+      path: "/Agri-Services",
+    },
+    {
+      name: "Projects",
+      path: "/Agri-Projects",
+    },
     {
       name: "News",
       path: "/Agri-News",
       isDropdown: true,
       dropdownItems: [
-        { name: "News", path: "/Agri-News" },
-        { name: "News Blog", path: "/Agri-News" },
-        { name: "News Grid", path: "/Agri-News-Grid" },
+        {
+          name: "News Blog",
+          path: "/Agri-News",
+        },
+        {
+          name: "News Grid",
+          path: "/Agri-News-Grid",
+        },
       ],
     },
-    { name: "Shop", path: "/Agri-Shop" },
-    { name: "Contact", path: "/Contact-Us" },
+    {
+      name: "Shop",
+      path: "/Agri-Shop",
+    },
+    {
+      name: "Contact",
+      path: "/Contact-Us",
+    },
   ];
 
   return (
     <nav className="bg-[#F8F7F0] w-full py-4 shadow-sm relative z-50">
-      <div ref={menuRef} className="container mx-auto flex justify-between items-center px-4 lg:px-10">
-        
+      <div
+        ref={menuRef}
+        className="container mx-auto flex justify-between items-center px-4 lg:px-10"
+      >
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
           <button
@@ -89,7 +114,10 @@ export default function Navbar() {
               {item.isDropdown && newsDropdownOpen && (
                 <ul className="absolute left-0 w-48 bg-white shadow-md rounded-md overflow-hidden">
                   {item.dropdownItems.map((subItem, subIndex) => (
-                    <li key={subIndex} className="px-4 py-2 hover:bg-gray-200 transition">
+                    <li
+                      key={subIndex}
+                      className="px-4 py-2 hover:bg-gray-200 transition"
+                    >
                       <Link href={subItem.path}>{subItem.name}</Link>
                     </li>
                   ))}
@@ -102,9 +130,21 @@ export default function Navbar() {
         {/* Right: Search & Cart Icons */}
         <div className="flex items-center space-x-6">
           <div className="pl-4 border-l border-gray-400">
-            <Image src="/Search.png" alt="Search" width={22} height={22} className="cursor-pointer" />
+            <Image
+              src="/Search.png"
+              alt="Search"
+              width={22}
+              height={22}
+              className="cursor-pointer"
+            />
           </div>
-          <Image src="/Cart.png" alt="Cart" width={22} height={22} className="cursor-pointer" />
+          <Image
+            src="/Cart.png"
+            alt="Cart"
+            width={22}
+            height={22}
+            className="cursor-pointer"
+          />
         </div>
       </div>
 
@@ -113,19 +153,28 @@ export default function Navbar() {
         <div className="md:hidden bg-white shadow-md absolute w-full left-0 top-16 z-50 transition-all duration-300">
           <ul className="flex flex-col items-center py-4 space-y-4">
             {menuItems.map((item, index) => (
-              <li key={index} className="text-[16px] font-medium text-gray-800 w-full text-center hover:text-black">
+              <li
+                key={index}
+                className="text-[16px] font-medium text-gray-800 w-full text-center hover:text-black"
+              >
                 {item.isDropdown ? (
                   <>
                     {item.dropdownItems.map((subItem, subIndex) => (
                       <div key={subIndex} className="w-full text-center mb-4">
-                        <Link href={subItem.path} onClick={() => setMobileMenuOpen(false)}>
+                        <Link
+                          href={subItem.path}
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
                           {subItem.name}
                         </Link>
                       </div>
                     ))}
                   </>
                 ) : (
-                  <Link href={item.path} onClick={() => setMobileMenuOpen(false)}>
+                  <Link
+                    href={item.path}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
                     {item.name}
                   </Link>
                 )}

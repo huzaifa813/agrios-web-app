@@ -54,14 +54,8 @@ export default function Header() {
             <div
               key={index}
               className={`flex items-center space-x-3 pr-4 ${
-                index !== array.length - 1 ? "md:border-r" : ""
+                index !== array.length - 1 ? "lg:border-r border-[#E4E2D7]" : ""
               }`}
-              style={{
-                borderRight:
-                  index !== array.length - 1
-                    ? `1px solid ${Colors.borderColor}`
-                    : "none",
-              }}
             >
               <div
                 className="w-10 h-10 flex items-center justify-center rounded-full"
