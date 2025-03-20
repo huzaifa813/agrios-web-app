@@ -21,7 +21,7 @@ export default function Testimonials() {
 
   return (
     <section
-      className="relative w-full min-h-screen flex flex-col justify-center items-center"
+      className="relative w-full min-h-screen flex flex-col justify-center items-center mt-10"
       style={{
         backgroundImage: "url('/testimonalsbg.png')",
         backgroundSize: "cover",
