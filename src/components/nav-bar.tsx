@@ -2,29 +2,37 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react"; // Import Lucide icons
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [newsDropdownOpen, setNewsDropdownOpen] = useState(false);
   const [mobileNewsDropdownOpen, setMobileNewsDropdownOpen] = useState(false);
+  
+  const menuRef = useRef<HTMLDivElement>(null); // Ref for menu
 
   // Close dropdown when clicking outside (Mobile)
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
-      if (!target.closest(".menu-container")) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setMobileMenuOpen(false);
         setNewsDropdownOpen(false);
         setMobileNewsDropdownOpen(false);
       }
     };
-  
-    document.addEventListener("click", handleClickOutside);
+
+    if (mobileMenuOpen) {
+      // Attach listener only when the menu is open
+      setTimeout(() => {
+        document.addEventListener("click", handleClickOutside);
+      }, 100);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+
     return () => document.removeEventListener("click", handleClickOutside);
-  }, []);
-  
+  }, [mobileMenuOpen]);
 
   const menuItems = [
     { name: "Home", path: "/" },
@@ -46,10 +54,16 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[#F8F7F0] w-full py-4 shadow-sm relative z-50">
-      <div className="container mx-auto flex justify-between items-center px-4 lg:px-10 menu-container">
+      <div ref={menuRef} className="container mx-auto flex justify-between items-center px-4 lg:px-10">
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <button 
+            className="cursor-pointer" 
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent immediate close event
+              setMobileMenuOpen((prev) => !prev);
+            }}
+          >
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -74,9 +88,7 @@ export default function Navbar() {
 
               {/* Dropdown Menu for News (Desktop) */}
               {item.isDropdown && newsDropdownOpen && (
-                <ul
-                  className="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md overflow-hidden"
-                >
+                <ul className="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md overflow-hidden">
                   {item.dropdownItems.map((subItem, subIndex) => (
                     <li key={subIndex} className="px-4 py-2 hover:bg-gray-200 transition">
                       <Link href={subItem.path}>{subItem.name}</Link>
